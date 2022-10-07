@@ -67,9 +67,19 @@ class Category:
 
 
 def create_spend_chart(lista):
+    # function that creeates a bar chart of the spendings of all the budgets and shows the % of
+    #  each specific budget contribution to the total spendings
+    # input : a list of budgets
+    # output: the bar chart 
+
+    #list of each budget
     budgets={}
+    #the total amout of spendings
     total=0
+    #the building block of the final chart
     display=""
+    
+    
     for item in lista:
         budgets[item.name.capitalize()]=0
         for transaction in item.ledger:
